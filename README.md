@@ -1,1 +1,1 @@
-# lab4-processor-architecture
+# lab3-processor-architectures
