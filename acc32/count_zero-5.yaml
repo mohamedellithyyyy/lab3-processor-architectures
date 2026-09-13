@@ -1,0 +1,7 @@
+memory_mapped_io:
+  in:
+    - 5
+  out: []
+assert:
+  - address: 0x84
+    value: 30
