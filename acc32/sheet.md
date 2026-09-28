@@ -3,7 +3,7 @@
 ### Instructions
 
 | Instruction | Meaning | Definition |
-|---|---|---|
+|----|---|---|
 | `load_imm X` | `Acc ← X` | Put the **value `X` directly** into the accumulator. |
 | `load X` | `Acc ← Mem[PC + X]` | Load a value from a **relative memory address** into `Acc`. |
 | `store X` | `Mem[PC + X] ← Acc` | Store `Acc` into a **relative memory address**. |
