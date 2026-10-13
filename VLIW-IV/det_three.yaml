@@ -1,0 +1,19 @@
+name: "determinant_2x2_stream(3, 0, 0, 0, 0, -1, 2, 3, -4, 7, -5, 4, 8) == [0, -2, 76]"
+limit: 2000
+memory_size: 0x1000
+memory_mapped_io:
+  0x80: [3, 0, 0, 0, 0, -1, 2, 3, -4, 7, -5, 4, 8]
+  0x84: []
+reports:
+  - name: Check results
+    slice: last
+    view: |
+      numio[0x80]: {io:0x80:dec}
+      numio[0x84]: {io:0x84:dec}
+    assert: |
+      numio[0x80]: [] >>> []
+      numio[0x84]: [] >>> [0,-2,76]
+  - name: Slot utilization
+    slice: last
+    view: |
+      {isa-specific}
